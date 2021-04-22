@@ -5,7 +5,13 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = () => {
+  document.querySelector(".container").addEventListener("click", () => {
+    document.querySelector("#newCard").innerHTML = generateCard();
+  });
+};
+
+let generateCard = () => {
   let figure = ["♥", "♦", "♣", "♠"];
   let character = [
     "A",
@@ -26,15 +32,14 @@ window.onload = function() {
   let figureIndex = Math.floor(Math.random() * figure.length);
   let characterIndex = Math.floor(Math.random() * character.length);
 
-  document.querySelector("#figura1").innerHTML = `<h1>
-            ${figure[figureIndex]}</h1>`;
-  document.querySelector("#numero").innerHTML = `<h1>
-            ${character[characterIndex]}</h1>`;
-  document.querySelector("#figura2").innerHTML = `<h1>
-            ${figure[figureIndex]}</h1>`;
+  document.querySelector("#figura1").innerHTML = `
+            ${figure[figureIndex]}`;
+  document.querySelector("#numero").innerHTML = `
+            ${character[characterIndex]}`;
+  document.querySelector("#figura2").innerHTML = `
+            ${figure[figureIndex]}`;
 
-  if (figure == "♦" || figure == "♥") {
-    document.getElementById("figure1", "figure2").style.color = "red";
-    document.getElementById("numero").style.color = "red";
-  }
+  //   if (figure == "♦" || figure == "♥") {
+  //     document.getElementById("#figura1", "#figura2").style.color = "red";
+  //   }
 };
