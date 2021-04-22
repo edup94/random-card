@@ -1,1 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#figura2 {
+  transform: rotate(180deg);
+}
