@@ -1,5 +1,48 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-
-#figura2 {
+.body {
+  box-sizing: border-box;
+}
+.card {
+  font-family: "Bree Serif", serif;
+  border-radius: 10px;
+  margin: auto;
+  display: inline-block;
+  height: 320px;
+  width: 220px;
+  position: relative;
+  text-align: center;
+  font-size: 60px;
+}
+.card::before {
+  position: absolute;
+  font-size: 60px;
+  top: 0px;
+  left: 20px;
+}
+.card::after {
+  position: absolute;
+  font-size: 60px;
+  bottom: 0px;
+  right: 20px;
   transform: rotate(180deg);
+}
+.spades:before,
+.spades:after {
+  content: "\2660";
+  color: black;
+}
+.clubs:before,
+.clubs:after {
+  content: "\2663";
+  color: black;
+}
+.diams:before,
+.diams:after {
+  content: "\2666";
+  color: red;
+}
+.hearts:before,
+.hearts:after {
+  content: "\2665";
+  color: red;
 }
