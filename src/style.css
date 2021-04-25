@@ -16,14 +16,14 @@
 .card::before {
   position: absolute;
   font-size: 60px;
-  top: 0px;
-  left: 20px;
+  top: -15px;
+  left: 10px;
 }
 .card::after {
   position: absolute;
   font-size: 60px;
-  bottom: 0px;
-  right: 20px;
+  bottom: -15px;
+  right: 10px;
   transform: rotate(180deg);
 }
 .spades:before,
